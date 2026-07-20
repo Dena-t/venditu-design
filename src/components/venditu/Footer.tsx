@@ -16,7 +16,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2">
               <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-primary-foreground">
-                <Store className="h-5 w-5" strokeWidth={2.25} />
+                <VenditutMark className="h-5 w-5" color="currentColor" />
               </span>
               <span className="text-lg font-semibold tracking-tight">Venditu</span>
             </div>
