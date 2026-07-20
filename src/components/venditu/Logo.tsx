@@ -19,6 +19,11 @@ export function Logo({ className, variant = "color", showWordmark = true }: Logo
   );
 }
 
+/**
+ * Venditu mark — a minimalist V formed by a storefront awning.
+ * The rounded-square container reads as a storefront; the negative-space
+ * notch at the top creates a subtle V, symbolizing exchange between two sides.
+ */
 export function VenditutMark({
   className,
   color = "var(--color-primary)",
@@ -34,15 +39,15 @@ export function VenditutMark({
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      {/* Two interlocking chevrons forming a V — symbolizing exchange */}
+      {/* Storefront silhouette with a V-shaped notch cut from the top edge */}
       <path
-        d="M6 10 L20 32 L20 24 L11 10 Z"
+        d="M8 12 A4 4 0 0 1 12 8 H16 L20 14 L24 8 H28 A4 4 0 0 1 32 12 V28 A4 4 0 0 1 28 32 H12 A4 4 0 0 1 8 28 Z"
         fill={color}
       />
+      {/* Inner doorway — a tall arch centered, tying to the marketplace/storefront idea */}
       <path
-        d="M34 10 L20 32 L20 24 L29 10 Z"
-        fill={color}
-        opacity="0.72"
+        d="M17 32 V24 A3 3 0 0 1 20 21 A3 3 0 0 1 23 24 V32 Z"
+        fill="var(--color-background)"
       />
     </svg>
   );

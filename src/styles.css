@@ -79,57 +79,58 @@
 :root {
   --radius: 0.875rem;
 
-  /* Surfaces — warm ivory background */
-  --background: #FAF7F2;
-  --foreground: #1F1B24;
+  /* Surfaces */
+  --background: #F8F7F5;
+  --foreground: #1F2937;
   --card: #FFFFFF;
-  --card-foreground: #1F1B24;
+  --card-foreground: #1F2937;
   --popover: #FFFFFF;
-  --popover-foreground: #1F1B24;
+  --popover-foreground: #1F2937;
 
-  /* Brand — Eggplant Deep #3B1C4A */
-  --primary: #3B1C4A;
-  --primary-foreground: #FAF7F2;
-  --primary-hover: #6D3B6E;
+  /* Brand — Deep Purple */
+  --primary: #4A235A;
+  --primary-foreground: #FFFFFF;
+  --primary-hover: #6C3483;
 
-  /* Secondary — Light Lavender */
-  --secondary: #EEE5F2;
-  --secondary-foreground: #3B1C4A;
+  /* Secondary — soft lavender surface */
+  --secondary: #F1EBF4;
+  --secondary-foreground: #4A235A;
 
-  --muted: #EEE5F2;
-  --muted-foreground: #6B6373;
+  --muted: #F1EBF4;
+  --muted-foreground: #6B7280;
 
-  /* Accent — Soft Gold #D6A85F */
-  --accent: #D6A85F;
-  --accent-foreground: #1F1B24;
-  --accent-hover: #C4944F;
+  /* Accent — Deep Forest Teal */
+  --accent: #294541;
+  --accent-foreground: #FFFFFF;
+  --accent-hover: #1E3431;
 
   --destructive: oklch(0.58 0.22 27);
-  --destructive-foreground: #FAF7F2;
+  --destructive-foreground: #FFFFFF;
 
-  /* Success — Sage Green #7FA37A */
-  --success: #7FA37A;
-  --success-foreground: #FAF7F2;
+  /* Success */
+  --success: #22C55E;
+  --success-foreground: #FFFFFF;
 
   --warning: oklch(0.78 0.15 75);
   --warning-foreground: oklch(0.25 0.05 75);
 
   --info: oklch(0.62 0.15 235);
-  --info-foreground: oklch(0.99 0.003 240);
+  --info-foreground: #FFFFFF;
 
-  --border: #E4D9EA;
-  --input: #E4D9EA;
-  --ring: #3B1C4A;
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: #4A235A;
 
-  --sidebar: #FAF7F2;
-  --sidebar-foreground: #1F1B24;
-  --sidebar-primary: #3B1C4A;
-  --sidebar-primary-foreground: #FAF7F2;
-  --sidebar-accent: #EEE5F2;
-  --sidebar-accent-foreground: #3B1C4A;
-  --sidebar-border: #E4D9EA;
-  --sidebar-ring: #3B1C4A;
+  --sidebar: #F8F7F5;
+  --sidebar-foreground: #1F2937;
+  --sidebar-primary: #4A235A;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F1EBF4;
+  --sidebar-accent-foreground: #4A235A;
+  --sidebar-border: #E5E7EB;
+  --sidebar-ring: #4A235A;
 }
+
 
 .dark {
   --background: oklch(0.14 0.014 240);
