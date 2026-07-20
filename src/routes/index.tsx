@@ -5,7 +5,7 @@ import { Categories } from "@/components/venditu/Categories";
 import { SellForYou } from "@/components/venditu/SellForYou";
 import { LatestListings, FeaturedListings } from "@/components/venditu/Listings";
 import { Features } from "@/components/venditu/Features";
-import { MobileApp } from "@/components/venditu/MobileApp";
+
 import { Newsletter } from "@/components/venditu/Newsletter";
 import { Footer } from "@/components/venditu/Footer";
 
@@ -24,7 +24,7 @@ function Landing() {
         <LatestListings />
         <FeaturedListings />
         <Features />
-        <MobileApp />
+        
         <Newsletter />
       </main>
       <Footer />
