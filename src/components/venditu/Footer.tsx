@@ -1,4 +1,5 @@
-import { Store, Twitter, Facebook, Instagram, Youtube, Globe } from "lucide-react";
+import { Twitter, Facebook, Instagram, Youtube, Globe } from "lucide-react";
+import { VenditutMark } from "./Logo";
 
 const sections = [
   { title: "Marketplace", links: ["Browse listings", "Post an ad", "Featured", "Categories", "Deals"] },
