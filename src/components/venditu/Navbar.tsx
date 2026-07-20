@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Bell, Search, Menu, X, Globe, Store } from "lucide-react";
+import { Bell, Search, Menu, X, Globe } from "lucide-react";
+import { VenditutMark } from "./Logo";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -9,11 +10,9 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <a href="/" className="flex shrink-0 items-center gap-2 font-semibold tracking-tight">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-primary-foreground shadow-sm">
-            <Store className="h-5 w-5" strokeWidth={2.25} />
-          </span>
-          <span className="text-lg">Venditu</span>
+        <a href="/" className="flex shrink-0 items-center gap-2.5 font-semibold tracking-tight">
+          <VenditutMark className="h-9 w-9" />
+          <span className="text-lg text-foreground">Venditu</span>
         </a>
 
         {/* Search — desktop */}
