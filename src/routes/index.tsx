@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/venditu/Navbar";
 import { Hero } from "@/components/venditu/Hero";
 import { Categories } from "@/components/venditu/Categories";
+import { SellForYou } from "@/components/venditu/SellForYou";
 import { LatestListings, FeaturedListings } from "@/components/venditu/Listings";
 import { Features } from "@/components/venditu/Features";
 import { MobileApp } from "@/components/venditu/MobileApp";
@@ -19,6 +20,7 @@ function Landing() {
       <main>
         <Hero />
         <Categories />
+        <SellForYou />
         <LatestListings />
         <FeaturedListings />
         <Features />
