@@ -30,7 +30,7 @@ export function Newsletter() {
             />
             <button
               type="submit"
-              className="inline-flex h-11 items-center justify-center gap-1.5 rounded-xl bg-primary px-5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-hover"
+              className="inline-flex h-11 items-center justify-center gap-1.5 rounded-xl bg-accent px-5 text-sm font-semibold text-accent-foreground shadow-sm transition-colors hover:bg-accent-hover"
             >
               {sent ? "Subscribed ✓" : (<>Subscribe <ArrowRight className="h-4 w-4" /></>)}
             </button>

@@ -54,17 +54,17 @@ export function Hero() {
                   className="w-full bg-transparent text-sm placeholder:text-muted-foreground focus:outline-none"
                 />
               </label>
-              <button className="inline-flex h-11 items-center justify-center gap-1.5 rounded-xl bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary-hover hover:shadow-md active:scale-[0.98]">
+              <button className="inline-flex h-11 items-center justify-center gap-1.5 rounded-xl bg-accent px-5 text-sm font-semibold text-accent-foreground shadow-sm transition-all hover:bg-accent-hover hover:shadow-md active:scale-[0.98]">
                 <Search className="h-4 w-4" /> Search
               </button>
             </div>
           </div>
 
           <div className="mt-6 flex flex-wrap items-center gap-3">
-            <a href="#listings" className="inline-flex h-11 items-center gap-2 rounded-full bg-foreground px-5 text-sm font-semibold text-background transition-all hover:bg-foreground/85 hover:shadow-md">
+            <a href="#listings" className="inline-flex h-11 items-center gap-2 rounded-full bg-accent px-5 text-sm font-semibold text-accent-foreground shadow-sm transition-all hover:bg-accent-hover hover:shadow-md active:scale-[0.98]">
               Browse listings <ArrowRight className="h-4 w-4" />
             </a>
-            <a href="#sell" className="inline-flex h-11 items-center rounded-full border border-border bg-background px-5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary">
+            <a href="#sell" className="inline-flex h-11 items-center rounded-full border border-border bg-background px-5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary hover:border-primary/30">
               Sell an item
             </a>
           </div>
