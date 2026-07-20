@@ -44,12 +44,12 @@ export function SellForYou() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href="/sell-for-you"
-                className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground shadow-md transition-all hover:bg-primary-hover hover:shadow-lg active:scale-[0.98]"
+                className="inline-flex h-12 items-center gap-2 rounded-full bg-accent px-6 text-sm font-semibold text-accent-foreground shadow-md transition-all hover:bg-accent-hover hover:shadow-lg active:scale-[0.98]"
               >
                 Start selling for me <ArrowRight className="h-4 w-4" />
               </a>
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <CheckCircle2 className="h-4 w-4 text-primary" />
+                <CheckCircle2 className="h-4 w-4 text-accent" />
                 No listing fees · Cancel anytime
               </div>
             </div>
