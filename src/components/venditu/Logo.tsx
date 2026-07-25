@@ -21,9 +21,9 @@ export function Logo({ className, variant = "color", showWordmark = true }: Logo
 }
 
 /**
- * Venditu mark — a modern minimal price/sale tag.
- * A rounded tag silhouette with a punched hole (negative space) and a
- * subtle accent dot suggesting a deal / transaction.
+ * Venditu mark — modern minimal sale label.
+ * A tilted rounded price-tag silhouette with a punched string hole and a
+ * subtle accent spark suggesting a great deal / trade.
  */
 export function VenditutMark({
   className,
@@ -42,16 +42,17 @@ export function VenditutMark({
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      {/* Price tag body: rounded rectangle with an angled top-left corner
-          pointing to the hole — evoke_removed a classic sale/price tag. */}
-      <path
-        d="M15.2 4.6 L34 4.6 A2.4 2.4 0 0 1 36.4 7 V25.8 A3.2 3.2 0 0 1 35.46 28.06 L28.06 35.46 A3.2 3.2 0 0 1 25.8 36.4 H7 A2.4 2.4 0 0 1 4.6 34 V15.2 A3.2 3.2 0 0 1 5.54 12.94 L12.94 5.54 A3.2 3.2 0 0 1 15.2 4.6 Z"
-        fill={color}
-      />
-      {/* Punch hole — negative space in tag */}
-      <circle cx="13" cy="13" r="3.2" fill="var(--color-background)" />
-      {/* Accent dot — subtle deal/spark */}
-      <circle cx="27" cy="27" r="2.6" fill={dotColor} />
+      <g transform="rotate(-18 20 20)">
+        {/* Sale label body — rounded rectangle with angled tip on the left */}
+        <path
+          d="M14 6 L33 6 A3 3 0 0 1 36 9 V31 A3 3 0 0 1 33 34 H14 A3 3 0 0 1 11.6 32.8 L4.9 22.8 A3 3 0 0 1 4.9 17.2 L11.6 7.2 A3 3 0 0 1 14 6 Z"
+          fill={color}
+        />
+        {/* String hole */}
+        <circle cx="12.2" cy="20" r="2.6" fill="var(--color-background)" />
+        {/* Accent spark — deal dot */}
+        <circle cx="28" cy="20" r="2.4" fill={dotColor} />
+      </g>
     </svg>
   );
 }
