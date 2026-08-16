@@ -104,4 +104,3 @@ export function ListingCard({ listing }: { listing: BrowseListing }) {
   );
 }
 
-export { Package };
