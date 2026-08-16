@@ -8,12 +8,14 @@ import { Newsletter } from "@/components/venditu/Newsletter";
 import { Footer } from "@/components/venditu/Footer";
 import { SignUp } from "@/components/venditu/SignUp";
 import { SignIn } from "@/components/venditu/SignIn";
+import { ListingsPage } from "@/components/venditu/listings/ListingsPage";
 
 export default function App() {
   const path = typeof window !== "undefined" ? window.location.pathname : "/";
 
   if (path === "/signup") return <SignUp />;
   if (path === "/signin") return <SignIn />;
+  if (path === "/listings") return <ListingsPage />;
 
   return (
     <div className="min-h-screen bg-background">

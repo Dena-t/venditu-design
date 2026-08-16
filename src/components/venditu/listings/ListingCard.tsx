@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, MapPin, Package, User } from "lucide-react";
+import { ChevronLeft, ChevronRight, MapPin, User } from "lucide-react";
 import { FavoriteButton } from "./FavoriteButton";
 import { QuantityDisplay } from "./QuantityDisplay";
 import { timeAgo, type BrowseListing } from "./data";
