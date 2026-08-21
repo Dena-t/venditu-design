@@ -17,6 +17,7 @@ export default function App() {
   if (path === "/signup") return <SignUp />;
   if (path === "/signin") return <SignIn />;
   if (path === "/listings") return <ListingsPage />;
+  if (path === "/create-listing") return <CreateListingPage />;
 
   return (
     <div className="min-h-screen bg-background">
