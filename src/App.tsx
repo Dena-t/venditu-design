@@ -10,6 +10,7 @@ import { SignUp } from "@/components/venditu/SignUp";
 import { SignIn } from "@/components/venditu/SignIn";
 import { ListingsPage } from "@/components/venditu/listings/ListingsPage";
 import { CreateListingPage } from "@/components/venditu/create-listing/CreateListingPage";
+import { MyListingsPage } from "@/components/venditu/my-listings/MyListingsPage";
 
 export default function App() {
   const path = typeof window !== "undefined" ? window.location.pathname : "/";
