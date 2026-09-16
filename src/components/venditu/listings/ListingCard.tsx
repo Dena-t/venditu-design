@@ -14,6 +14,12 @@ export function ListingCard({ listing }: { listing: BrowseListing }) {
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+      <a
+        href={`/listing/${listing.id}`}
+        aria-label={`View ${listing.title}`}
+        className="absolute inset-0 z-[1]"
+        style={{ position: "absolute" }}
+      />
       <div className="relative aspect-[4/3] overflow-hidden bg-secondary">
         {listing.images.map((src, i) => (
           <img

@@ -11,9 +11,13 @@ import { SignIn } from "@/components/venditu/SignIn";
 import { ListingsPage } from "@/components/venditu/listings/ListingsPage";
 import { CreateListingPage } from "@/components/venditu/create-listing/CreateListingPage";
 import { MyListingsPage } from "@/components/venditu/my-listings/MyListingsPage";
+import { ListingDetailsPage } from "@/components/venditu/listing-details/ListingDetailsPage";
 
 export default function App() {
   const path = typeof window !== "undefined" ? window.location.pathname : "/";
+
+  const details = path.match(/^\/listing\/([^/]+)\/?$/);
+  if (details) return <ListingDetailsPage id={decodeURIComponent(details[1])} />;
 
   if (path === "/signup") return <SignUp />;
   if (path === "/signin") return <SignIn />;
