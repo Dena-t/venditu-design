@@ -38,7 +38,12 @@ export function ListingManagementCard({
         <div className="flex min-w-0 flex-1 flex-col">
           <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
             <div className="min-w-0">
-              <h3 className="truncate text-base font-semibold text-foreground">{listing.title}</h3>
+              <a
+                href={`/listing/${listing.id}`}
+                className="block truncate text-base font-semibold text-foreground transition-colors hover:text-primary"
+              >
+                {listing.title}
+              </a>
               <p className="mt-1 text-sm text-muted-foreground">
                 {listing.category} · <MapPin className="inline h-3.5 w-3.5 -translate-y-px" />{" "}
                 {listing.city}, {listing.province}
@@ -67,6 +72,12 @@ export function ListingManagementCard({
           </div>
 
           <div className="mt-4 flex gap-2.5 sm:mt-auto sm:justify-end sm:pt-4">
+            <a
+              href={`/listing/${listing.id}`}
+              className="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-xl border border-border bg-background px-4 text-sm font-semibold transition-colors hover:bg-secondary sm:flex-none"
+            >
+              <Eye className="h-4 w-4" /> View
+            </a>
             <button
               onClick={editing ? onCancelEdit : onEdit}
               aria-expanded={editing}
