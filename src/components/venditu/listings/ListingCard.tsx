@@ -13,12 +13,7 @@ export function ListingCard({ listing }: { listing: BrowseListing }) {
   };
 
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-      <a
-        href={`/listing/${listing.id}`}
-        aria-label={`View ${listing.title}`}
-        className="absolute inset-0 z-10"
-      />
+    <article className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       <div className="relative aspect-[4/3] overflow-hidden bg-secondary">
         {listing.images.map((src, i) => (
           <img
@@ -33,7 +28,7 @@ export function ListingCard({ listing }: { listing: BrowseListing }) {
         ))}
         <div className="pointer-events-none absolute inset-0 bg-foreground/0 transition-colors duration-300 group-hover:bg-foreground/5" />
 
-        <div className="absolute right-3 top-3 z-20">
+        <div className="absolute right-3 top-3">
           <FavoriteButton label={`Save ${listing.title}`} />
         </div>
 
@@ -48,14 +43,14 @@ export function ListingCard({ listing }: { listing: BrowseListing }) {
             <button
               onClick={go(-1)}
               aria-label="Previous image"
-              className="absolute left-2 top-1/2 z-20 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition-opacity duration-200 hover:bg-background group-hover:opacity-100"
+              className="absolute left-2 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition-opacity duration-200 hover:bg-background group-hover:opacity-100"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
             <button
               onClick={go(1)}
               aria-label="Next image"
-              className="absolute right-2 top-1/2 z-20 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition-opacity duration-200 hover:bg-background group-hover:opacity-100"
+              className="absolute right-2 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-full bg-background/90 opacity-0 shadow-sm transition-opacity duration-200 hover:bg-background group-hover:opacity-100"
             >
               <ChevronRight className="h-4 w-4" />
             </button>
