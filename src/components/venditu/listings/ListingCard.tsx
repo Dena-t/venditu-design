@@ -70,7 +70,12 @@ export function ListingCard({ listing }: { listing: BrowseListing }) {
 
       <div className="flex flex-1 flex-col gap-2 p-4">
         <div className="flex items-start justify-between gap-3">
-          <h3 className="line-clamp-2 text-sm font-semibold text-foreground">{listing.title}</h3>
+          <a
+            href={`/listing/${listing.id}`}
+            className="line-clamp-2 text-sm font-semibold text-foreground transition-colors hover:text-primary"
+          >
+            {listing.title}
+          </a>
           <div className="shrink-0 text-sm font-bold text-primary">
             {listing.currency}
             {listing.price.toLocaleString()}
