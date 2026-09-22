@@ -11,6 +11,7 @@ import { SignIn } from "@/components/venditu/SignIn";
 import { ListingsPage } from "@/components/venditu/listings/ListingsPage";
 import { CreateListingPage } from "@/components/venditu/create-listing/CreateListingPage";
 import { MyListingsPage } from "@/components/venditu/my-listings/MyListingsPage";
+import { ListingDetailsPage } from "@/components/venditu/listing-details/ListingDetailsPage";
 
 export default function App() {
   const path = typeof window !== "undefined" ? window.location.pathname : "/";
@@ -20,6 +21,7 @@ export default function App() {
   if (path === "/listings") return <ListingsPage />;
   if (path === "/create-listing") return <CreateListingPage />;
   if (path === "/my-listings") return <MyListingsPage />;
+  if (path.startsWith("/listing/")) return <ListingDetailsPage id={decodeURIComponent(path.slice("/listing/".length))} />;
 
   return (
     <div className="min-h-screen bg-background">
