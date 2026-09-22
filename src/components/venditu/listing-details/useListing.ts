@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { browseListings, type BrowseListing } from "@/components/venditu/listings/data";
+import { supabase } from "@/integrations/supabase/client";
+import type { BrowseListing } from "@/components/venditu/listings/data";
 
 /** Fields the details page renders when the listings source provides them. */
 export type DetailListing = BrowseListing & {
@@ -40,28 +41,45 @@ export function useListing(id: string) {
   return state;
 }
 
-/** Single access point for the existing listings source. */
+/** Loads the real listings from the backend `GET /listings` endpoint. */
 async function fetchListings(): Promise<BrowseListing[]> {
-  const res = await fetch("/listings", { headers: { Accept: "application/json" } }).catch(() => null);
-  if (res && res.ok && res.headers.get("content-type")?.includes("application/json")) {
-    return (await res.json()) as BrowseListing[];
+  const res = await fetch("/listings", { headers: { Accept: "application/json" } });
+  if (!res.ok) {
+    throw new Error(`Failed to load listing (status ${res.status})`);
   }
-  // No API server in this environment — fall back to the app's existing listings source.
-  return browseListings;
+  return (await res.json()) as BrowseListing[];
 }
 
-/** Fires the existing authenticated view endpoint at most once per listing. */
+/**
+ * Fires the existing `POST /listings/:id/view` endpoint at most once per listing.
+ *
+ * Uses the project's existing JWT mechanism: the Supabase session access token,
+ * sent as an `Authorization: Bearer <token>` header. When the user is not signed
+ * in, no request is made. A failed view-count request never breaks the page.
+ */
 export function useRecordView(id: string) {
   const sent = useRef<string | null>(null);
 
   useEffect(() => {
     if (!id || sent.current === id) return;
     sent.current = id;
-    fetch(`/listings/${encodeURIComponent(id)}/view`, {
-      method: "POST",
-      credentials: "include",
-    }).catch(() => {
-      /* view tracking must never break the page */
-    });
+
+    const recordView = async () => {
+      try {
+        const {
+          data: { session },
+        } = await supabase.auth.getSession();
+        if (!session?.access_token) return; // not signed in — skip the authenticated request
+
+        await fetch(`/listings/${encodeURIComponent(id)}/view`, {
+          method: "POST",
+          headers: { Authorization: `Bearer ${session.access_token}` },
+        });
+      } catch {
+        /* view tracking must never break the page */
+      }
+    };
+
+    recordView();
   }, [id]);
 }
